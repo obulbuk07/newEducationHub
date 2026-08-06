@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const items = ["Home", "Dentistry", "Farmacy", "Nursering"]
 
 function NavBar({activeContent, onContentChange}){
@@ -10,7 +12,9 @@ function NavBar({activeContent, onContentChange}){
                 >
                     {item}
                 </button>
+                
             ))}
+            <Link to="/guide">Student Guide</Link>
         </div>
     )
 }
