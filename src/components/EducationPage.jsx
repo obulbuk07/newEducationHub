@@ -1,8 +1,10 @@
 import EducationCard from "./EducationCard"
-function EducationPage(){
+function EducationPage({content}){
+
+    const name = content
     return(
         <div>
-            <h1>Education Page</h1>
+            <h1>{name}</h1>
             <EducationCard/>
         </div>
     )

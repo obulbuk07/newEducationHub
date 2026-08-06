@@ -1,7 +1,16 @@
-function NavBar(){
+const items = ["Home", "Dentistry", "Farmacy", "Nursering"]
+
+function NavBar({activeContent, onContentChange}){
     return(
         <div>
-            <h1>Navbar</h1>
+            {items.map(item => (
+                <button
+                    key={item}
+                    onClick={() => onContentChange(item)}
+                >
+                    {item}
+                </button>
+            ))}
         </div>
     )
 }
