@@ -7,6 +7,10 @@ import photo2 from "../img/photo2.jpg"
 import photo3 from "../img/photo3.jpg"
 import photo4 from "../img/photo4.jpg"
 import photo5 from "../img/photo5.jpg"
+import photo7 from "../img/photo7.jpg"
+import photo8 from "../img/photo8.jpg"
+import photo9 from "../img/photo9.jpg"
+import photo10 from "../img/photo10.jpg"
 
 const items = [
   
@@ -18,6 +22,10 @@ const items = [
   { image: photo5, title: 'Peaks', href: 'https://example.com/three' },
   { image: studentGuideLogo, title: 'Peaks', href: 'https://example.com/four' },
   { image: photo2, title: 'Peaks', href: 'https://example.com/three' },
+  { image: photo7, title: 'Peaks', href: 'https://example.com/three' },
+  { image: photo8, title: 'Peaks', href: 'https://example.com/three' },
+  { image: photo9, title: 'Peaks', href: 'https://example.com/three' },
+  { image: photo10, title: 'Peaks', href: 'https://example.com/three' },
   
 ];
 
