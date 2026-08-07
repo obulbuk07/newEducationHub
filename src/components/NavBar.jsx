@@ -13,7 +13,11 @@ function NavBar({activeContent, onContentChange}){
                     <button
                         key={item}
                         onClick={() => onContentChange(item)}
-                        className="hover:underline"
+                        className={ ` rounded-xl px-3 py-1 transition-colors duration-300 ease-in-out ${ 
+                            activeContent === item
+                                ? "bg-green-500  text-white"
+                                : "bg-white text-black"
+                        } `}
                     >
                         {item}
                     </button>

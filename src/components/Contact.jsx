@@ -1,6 +1,6 @@
 function Contact(){
     return(
-        <div className="col-span-3 bg-blue-400 row-span-2 rounded-xl shadow-xl text-white pt-4">
+        <div className="col-span-3 bg-blue-500 row-span-2 rounded-xl shadow-xl text-white pt-4">
              <form className="flex flex-col gap-2 p-4 md:w-2/3 w-3/3 mx-auto  " >
                 <h1 className="text-2xl text-center mb-6">Маєш зауваження або пропозиції? Напиши нам!</h1>
                 <label htmlFor="name">Ім'я</label>
