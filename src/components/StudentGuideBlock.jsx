@@ -10,7 +10,7 @@ function StudentGuideBlock(){
                 <p className="col-span-3" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, unde!</p>
             </div>
            
-            <Link className="col-span-5 text-center border-4 rounded-xl flex items-center justify-center text-xl py-2 hover:bg-white hover:text-red-400 transition" to="/guide">Перейти</Link>
+            <Link className="col-span-5 text-center border-3 rounded-xl border-white flex items-center justify-center text-xl py-2 hover:bg-white hover:text-red-400 transition" to="/guide">Перейти</Link>
         </div>
     )
 }

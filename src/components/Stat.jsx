@@ -1,3 +1,5 @@
+import CountUp from "./CountUp";
+
 function Stat(){
     return(
         <div className="w-4/4 grid grid-cols-3 gap-3" >
@@ -6,17 +8,47 @@ function Stat(){
             <div className="p-6 relative text-white w-4/4 rounded-xl bg-blue-400 shadow-xl">
                 <h2 className="text-xl pb-2" >Медсестринство</h2>
                 <p>Всього створено сторінок:</p>
-                <p className="absolute bottom-8  text-xl right-8">112</p>
+                <p className="absolute bottom-8  text-xl right-8">
+                    <CountUp
+                        from={0}
+                        to={117}
+                        separator=","
+                        direction="up"
+                        duration={2}
+                        className="count-up-text"
+                        delay={2}
+                    />
+                </p>
             </div>
             <div className="p-6 relative text-white w-4/4 rounded-xl bg-green-400 shadow-xl">
                 <h2 className="text-xl pb-2" >Фармація</h2>
                 <p>Всього створено сторінок:</p>
-                <p className="absolute bottom-8  text-xl right-8">46</p>
+                <p className="absolute bottom-8  text-xl right-8">
+                    <CountUp
+                        from={0}
+                        to={65}
+                        separator=","
+                        direction="up"
+                        duration={2.5}
+                        className="count-up-text"
+                        delay={2}
+                    />
+                </p>
             </div>
             <div className="p-6 relative text-white w-4/4 rounded-xl bg-red-400 shadow-xl">
                 <h2 className="text-xl pb-2" >Стоматологія</h2>
                 <p>Всього створено сторінок:</p>
-                <p className="absolute bottom-8  text-xl right-8">34</p>
+                <p className="absolute bottom-8  text-xl right-8">
+                    <CountUp
+                        from={0}
+                        to={34}
+                        separator=","
+                        direction="up"
+                        duration={3}
+                        className="count-up-text"
+                        delay={2}
+                    />
+                </p>
             </div>
             <div className="bg-gray-400 col-span-3 p-6 text-white rounded-xl shadow-xl flex justify-between" > 
                 <h1>Сумарно:</h1>

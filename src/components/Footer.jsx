@@ -33,7 +33,7 @@ function Footer(){
             </div>
             </div>
             
-            <div className="col-span-4 text-center bg-gray-900 text-white py-4" >
+            <div className="col-span-4 text-center bg-blue-500 text-white py-4" >
                 <p>
                     @2026 Oleksandr Bulbuk - All rights reserver
                 </p>
