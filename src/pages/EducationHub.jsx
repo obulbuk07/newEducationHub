@@ -33,7 +33,7 @@ function EducationHub(){
             <div>
                 {renderContent()}
             </div>
-            <Footer/>
+            <Footer activeContent={activeContent} onContentChange={setActiveContent} />
         </div>
     )
 }
