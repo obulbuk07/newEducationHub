@@ -13,7 +13,7 @@ function NavBar({activeContent, onContentChange}){
                     <button
                         key={item}
                         onClick={() => onContentChange(item)}
-                        className={ ` rounded-xl px-3 py-1 transition-colors duration-300 ease-in-out ${ 
+                        className={ ` rounded-xl px-3 py-1 hover:underline  transition-colors duration-300 ease-in-out ${ 
                             activeContent === item
                                 ? "bg-green-500  text-white"
                                 : "bg-white text-black"
@@ -23,7 +23,7 @@ function NavBar({activeContent, onContentChange}){
                     </button>
                 
                 ))}
-                <Link className="hover:underline" to="/guide">Student Guide</Link>
+                <Link className="hover:underline py-1" to="/guide">Student Guide</Link>
             </div>
             <img className="h-10" src={ifnmuLogo} alt="" />
         </div>

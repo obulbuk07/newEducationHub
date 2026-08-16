@@ -1,38 +1,23 @@
 import EducationCard from "./EducationCard"
 import SearchBar from "./SearchBar"
-import page from "../img/photo4.jpg"
+import pag from "../img/photo4.jpg"
+import nurseringPages from "../result.json"
+import farmacyPages from "../result.json"
+import dentistryPages from "../result.json"
 
-const pages = [
-    {
-        img: page,
-        title: "Education Card",
-        info: "Lorem impsum"
-    },
-    {
-        img: page,
-        title: "Education Card",
-        info: "Lorem impsum"
-    },
-    {
-        img: page,
-        title: "Education Card",
-        info: "Lorem impsum"
-    },
-    {
-        img: page,
-        title: "Education Card",
-        info: "Lorem impsums gsdfs"
-    },
-    {
-        img: page,
-        title: "Education Card",
-        info: "Lorem impsum"
-    },
-]
 
 function EducationPage({content}){
 
     const name = content
+    let data = null
+    if(name === 'dentistry'){
+        data = dentistryPages;
+    }else if(name === "nursering"){
+        data = nurseringPages;
+    }else if(name === "farmacy"){
+        data = farmacyPages;
+    }
+
     return(
         <div className="w-3/4 pt-40 mx-auto" >
             <div className="w-4/4 " >
@@ -41,11 +26,12 @@ function EducationPage({content}){
             </div>
             <SearchBar/>
             <div className="grid grid-cols-4 gap-8">
-                {pages.map(page => (
+                {data.map(page => (
                     <EducationCard
-                        img={page.img}
+                        img = {pag}
                         title={page.title}
-                        info={page.info}
+                        index = {page.index}
+                        elements = {page.elements}
                     />
                 ))}
             </div>
