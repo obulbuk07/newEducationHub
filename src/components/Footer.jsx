@@ -1,5 +1,7 @@
 import ifnmu from "../img/big_ifnmu_logo.png"
 
+const items = ["Головна", "Стоматологія", "Фармація", "Медсестринство"]
+
 function Footer({activeContent, onContentChange}){
     return(
         <footer className="w-4/4 mt-30 p-0" >
@@ -19,18 +21,22 @@ function Footer({activeContent, onContentChange}){
             </div>
             <div className="flex flex-col gap-4 pl-10" >
                 <h1 className="text-2xl border-b-2 border-red-500 pb-4" >Навігація по сайту</h1>
-                <p>Головна</p>
-                <p>Медсестринство</p>
-                <p>Стоматологія</p>
-                <p>Фармація</p>
-                <p>Student Guide</p>
+                {items.map(item => (
+                    <button
+                        key={item}
+                        onClick={() => onContentChange(item)}
+                        className={ ` text-left rounded-xl px-0 py-0 hover:underline  transition-colors duration-300 ease-in-out`}
+                    >
+                        {item}
+                    </button>
+                
+                ))}
             </div>
             <div className="flex flex-col gap-4 pl-10" >
                 <h1 className="text-2xl border-b-2 border-red-500 pb-4" >Додаткові посилання</h1>
-                <p>IFNMU</p>
-                <p>Authors</p>
-                <p>Collegeifnmu</p>
-                <p>About</p>
+                <a className="hover:underline" href="https://www.ifnmu.edu.ua/">IFNMU</a>
+                <a className="hover:underline" href="http://collegeifnmu.co.uk/eduHubPages/authors.html">Автори</a>
+                <a className="hover:underline" href="http://collegeifnmu.co.uk/about_us.html">Про коледж</a>
             </div>
             </div>
             
