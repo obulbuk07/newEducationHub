@@ -45,7 +45,7 @@ function EducationPage({content}){
         <div className="w-3/4 pt-40 mx-auto" >
             <div className="w-4/4 flex gap-4 " >
                 <div className=" rounded w-2/4 p-2 flex flex-col justify-around" >
-                    <h1 className="text-3xl pb-2" >{bannerTitle}</h1>
+                    <h1 className="text-4xl pb-2" >{bannerTitle}</h1>
                     <p className="text-xl text-gray-600" >{bannerInfo}</p>
                 </div>
                 <img className="w-2/5 rounded shadow" src={bannerImg} alt="" />
