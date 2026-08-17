@@ -6,6 +6,7 @@ import Library from "./Library";
 import museum from "../img/museum.jpg"
 import sport from "../img/sport_compleks.jpg"
 import clinic from "../img/clinic.jpg"
+import Cafes from "./Cafes";
 
 const locations = [
     {
@@ -53,6 +54,7 @@ function Locations(){
             <Library/>
             <Dormintoris/>
             <Corpuses/>
+            <Cafes/>
         </div>
     )
 }
