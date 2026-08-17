@@ -2,11 +2,24 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
-import pagesData from "../result.json";
+
+import nurseData from "../nurseringPages.json"
+import dentistryData from "../dentistryPages.json"
+import farmacyData from "../farmacyPages.json"
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import ifnmu from "../img/ifnmu_logo.png"
 
+
+let mode = localStorage.getItem("mode")
+let pagesData
+if(mode === "dentistry"){
+  pagesData = dentistryData
+}else if( mode === "farmacy"){
+  pagesData = farmacyData
+}else if(mode === "nursering"){
+  pagesData = nurseData
+}
 
 function ContentPage() {
   const { id } = useParams(); 
