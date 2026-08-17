@@ -7,7 +7,7 @@ function SearchBar({ query, onQueryChange, onSearch }){
             <p className="pt-5 text-gray-400 pb-6">Введи ключові слова</p>
             <div className="w-full flex flex-row gap-4">
                 <input
-                    className="w-4/4 py-2 px-4 mt-4 rounded-xl border-3 shadow-xl border-gray-400 focus:border-blue-500"
+                    className="w-4/4 py-2 px-4 mt-4 rounded-xl border-3 shadow-xl border-gray-400 focus:border-green-500"
                     value={query}
                     onChange={(e) => onQueryChange(e.target.value)}
                     type="text"

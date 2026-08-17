@@ -14,7 +14,7 @@ function EducationCard({img, title, index, elements}){
             </div>
             
             <div className="flex justify-between flex-col">
-                <button className="border-2 border-blue-500 rounded-xl py-2 px-5 mt-4 hover:bg-blue-500  hover:text-white transition" onClick={() => (
+                <button className="border-2 border-green-500 rounded-xl py-2 px-5 mt-4 hover:bg-green-500  hover:text-white transition" onClick={() => (
                     handleClick()
                 )} >Більше</button>
             </div>

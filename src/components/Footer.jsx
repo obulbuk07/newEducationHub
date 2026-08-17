@@ -40,7 +40,7 @@ function Footer({activeContent, onContentChange}){
             </div>
             </div>
             
-            <div className="col-span-4 text-center bg-blue-600 text-white py-4" >
+            <div className="col-span-4 text-center bg-green-500 text-white py-4" >
                 <p>
                     @2026 Oleksandr Bulbuk - All rights reserver
                 </p>
