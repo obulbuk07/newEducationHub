@@ -1,9 +1,10 @@
 import { useNavigate } from 'react-router-dom';
 
-function EducationCard({img, title, index, elements}){
+function EducationCard({img, title, index, elements, mode}){
     const navigate = useNavigate();
 
     const handleClick = () => {
+        localStorage.setItem("mode", mode)
         navigate(`/content/${index}`);
     }
     return(

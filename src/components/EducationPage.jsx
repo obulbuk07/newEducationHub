@@ -59,6 +59,7 @@ function EducationPage({content}){
                         title={page.title}
                         index={page.index}
                         elements={page.elements}
+                        mode={name}
                     />
                 ))}
             </div>

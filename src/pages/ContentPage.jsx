@@ -3,15 +3,24 @@ import { useParams } from 'react-router-dom';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import pagesData from "../result.json";
+import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import ifnmu from "../img/ifnmu_logo.png"
+
 
 function ContentPage() {
-  const { id } = useParams(); // useParams повертає значення з URL, наприклад "0"
+  const { id } = useParams(); 
+  const navigate = useNavigate();// useParams повертає значення з URL, наприклад "0"
 
   // Шукаємо за ключем `index`, приводячи обидва значення до Number
   const currentPage = pagesData.find((item) => Number(item.index) === Number(id));
 
   const elements = currentPage?.elements || [];
   const title = currentPage?.title || "";
+
+  const goBack = () => {
+    navigate("/")
+}
 
   const renderElement = (element) => {
     switch (element.type) {
@@ -64,7 +73,10 @@ function ContentPage() {
 
   return (
     <div>
-      <NavBar />
+      <div className='w-4/4 flex justify-between p-3 border shadow-xl fixed bg-white'>
+        <button className='hover:underline' onClick={goBack} >Go back</button>
+        <img className=' h-7' src={ifnmu} alt="" />
+      </div>
       <div className="w-3/4 mx-auto pt-30 min-h-screen">
 
         {elements.length > 0 ? (
