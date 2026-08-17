@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import ifnmuLogo from "../img/ifnmu_logo.png"
 import eduhubLogo from "../img/edu_hub_logo.png"
 
-const items = ["Home", "Dentistry", "Farmacy", "Nursering"]
+const items = ["Головна", "Стоматологія", "Фармація", "Медсестринство"]
 
 function NavBar({activeContent, onContentChange}){
     return(

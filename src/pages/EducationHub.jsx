@@ -5,10 +5,10 @@ import EducationPage from "../components/EducationPage"
 import { useState } from "react"
 
 const CONTENTS = {
-    HOME: "Home",
-    DENTISTRY: "Dentistry",
-    FARMACY: "Farmacy",
-    NURSERING: "Nursering",
+    HOME: "Головна",
+    DENTISTRY: "Стоматологія",
+    FARMACY: "Фармація",
+    NURSERING: "Медсестринство",
 }
 
 function EducationHub(){
