@@ -1,4 +1,5 @@
 import ifnmu from "../img/big_ifnmu_logo.png"
+
 function Footer({activeContent, onContentChange}){
     return(
         <footer className="w-4/4 mt-30 p-0" >
