@@ -1,5 +1,6 @@
 import CorpusesGallery from "./CorpusesGallery"
 import Corpuse from "./Corpuse"
+import AccordionGallery from "./AccordeonGallery"
 const corpuses = [
     {
         name: "Корпус загальноосвітніх дисциплін (вул. С.Бандери, 77)",
