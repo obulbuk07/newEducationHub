@@ -65,8 +65,8 @@ const corpuses = [
 
 function Corpuses(){
     return(
-        <div>
-            <h1 className="text-3xl text-center " >Corpuses</h1>
+        <div className="mt-10" >
+            <h1 className="text-3xl text-left " >Навчальні корпуси</h1>
             <CorpusesGallery/>
             <div className="grid grid-cols-2 gap-3">
                 {corpuses.map(corpuse => (
