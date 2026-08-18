@@ -4,6 +4,7 @@ import StudentGuideNavBar from "@/components/StudentGuideNavBar"
 import Locations from "@/components/Locations"
 import Footer from "@/components/Footer"
 import StudentGuideContent from "@/components/StudentGuideContent"
+import StudentOrgs from "@/components/StudentOrgs"
 
 function StudentGuide(){
     return(
@@ -18,6 +19,7 @@ function StudentGuide(){
             />*/}
             <Locations/>
             <StudentGuideContent/>
+            <StudentOrgs/>
             <Footer/>
         </div>
     )
