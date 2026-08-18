@@ -3,6 +3,8 @@ import StudentGuideBanner from "@/components/StudentGuideBanner"
 import StudentGuideNavBar from "@/components/StudentGuideNavBar"
 import Locations from "@/components/Locations"
 import Footer from "@/components/Footer"
+import StudentGuideContent from "@/components/StudentGuideContent"
+
 function StudentGuide(){
     return(
         <div>
@@ -15,6 +17,7 @@ function StudentGuide(){
                 link="https://www.ifnmu.edu.ua/home/public-information/student-trade-union/"
             />*/}
             <Locations/>
+            <StudentGuideContent/>
             <Footer/>
         </div>
     )

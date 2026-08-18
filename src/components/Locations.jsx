@@ -7,9 +7,11 @@ import museum from "../img/museum.jpg"
 import sport from "../img/sport_compleks.jpg"
 import clinic from "../img/clinic.jpg"
 import Cafes from "./Cafes";
+import { useState } from "react";
 
 const locations = [
     {
+        id: "sport",
         img: sport, 
         title: "Спортивний комплекс",
         info: "Спортивний комплекс Університету запрошує всіх студентів для тренувань, підтримання форми та активного відпочинку. У нас доступні сучасні тренажерні зали, секції з різних видів спорту та майданчики для командних ігор. Нагадуємо: відвідування занять можливе за наявності спортивної форми, а для зарахування норм із фізичного виховання необхідно регулярно відвідувати обрану секцію.",
@@ -18,6 +20,7 @@ const locations = [
         link: "#"
     },
     {
+        id:"clinic",
         img: clinic, 
         title: "Університетська клініка",
         info: "Отримати якісну медичну допомогу та консультації фахівців можна в нашій Університетській клініці, де працюють досвідчені лікарі та використовується сучасне обладнання. Нагадуємо: щоб відпрацювати пропущені через хворобу заняття, студент повинен надати офіційну медичну довідку, видану або завірену нашою клінікою.",
@@ -26,6 +29,7 @@ const locations = [
         link: "https://goo.gl/maps/UMmuVKSz8ZWVjN7V7"
     },
      {
+        id:"museum",
         img: museum, 
         title: "Музей",
         info: "Поглибити свої знання з анатомії людини та наочно ознайомитися з унікальними експонатами можна в нашому Анатомічному музеї, де проводяться навчальні заняття та організовуються пізнавальні екскурсії. Нагадуємо: щоб відвідати експозицію у складі групи або отримати доступ до навчальних залів, відвідувачі повинні попередньо узгодити час візиту та надати офіційну заявку, завірену нашою кафедрою.",
@@ -36,25 +40,29 @@ const locations = [
 ]
 
 function Locations(){
+    const [activeId, setActiveId] = useState("library")
+
+    const activeLocation = locations.find(loc => loc.id === activeId);
+
     return(
         <div className="w-3/4 mx-auto mt-20">
             <h1 className="text-4xl text-center" >Локації університету</h1>
             <p className="text-center py-4">Choose what you need</p>
-            <LocationsBar/>
-            {locations.map(location => (
+            <LocationsBar active={activeId} onSelect={setActiveId} />
+            {activeLocation && (
                 <SimpleLocation
-                    img={location.img}
-                    title={location.title}
-                    info={location.info}
-                    location={location.location}
-                    textlink={location.textlink}
-                    link={location.link}
+                    img={activeLocation.img}
+                    title={activeLocation.title}
+                    info={activeLocation.info}
+                    location={activeLocation.location}
+                    textlink={activeLocation.textlink}
+                    link={activeLocation.link}
                 />
-            ))}
-            <Library/>
-            <Dormintoris/>
-            <Corpuses/>
-            <Cafes/>
+            )}
+            {activeId === "library" && <Library />}
+            {activeId === "dormitories" && <Dormintoris />}
+            {activeId === "corpuses" && <Corpuses />}
+            {activeId === "cafes" && <Cafes />}
         </div>
     )
 }

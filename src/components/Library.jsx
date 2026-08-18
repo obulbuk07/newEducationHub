@@ -4,7 +4,7 @@ import StudentGuideButton from "./StudentGuideButton";
 
 function Library(){
     return(
-        <div className="flex flex-col">
+        <div className=" bg-white mt-6 pb-4 px-4 rounded flex flex-col">
             <SimpleLocation
                 img={library} 
                 title="Бібліотека"
