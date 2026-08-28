@@ -5,6 +5,7 @@ import Locations from "@/components/Locations"
 import Footer from "@/components/Footer"
 import StudentGuideContent from "@/components/StudentGuideContent"
 import StudentOrgs from "@/components/StudentOrgs"
+import StudentGuideContact from "@/components/StudentGuideContact"
 
 function StudentGuide(){
     return(
@@ -20,6 +21,7 @@ function StudentGuide(){
             <Locations/>
             <StudentGuideContent/>
             <StudentOrgs/>
+            <StudentGuideContact/>
             <Footer/>
         </div>
     )
